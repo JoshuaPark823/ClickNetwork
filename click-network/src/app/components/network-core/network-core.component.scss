@@ -1,0 +1,61 @@
+.core {
+
+    /**
+    * Dimension/Color Variables
+    */
+    --dimension: 500px;
+    --top-color: #e76f51;
+    --indent-color: #f4a261;
+    --base-color: #2A9D8F;
+
+    position:relative;
+    display:inline-block;
+    margin:20px;
+
+    height: var(--dimension);
+    width: var(--dimension);
+
+    cursor: pointer;
+
+    a {
+        height: 450px;
+
+        color:white;
+        font-family:Helvetica, sans-serif;
+        font-weight:bold;
+        font-size: 5rem;
+        text-align: center;
+        text-decoration:none;
+
+        background-color: var(--top-color);
+        
+        display:flex;
+        justify-content: center;
+        align-items: center;
+
+        position:relative;
+        padding:20px 40px;
+
+        box-shadow:inset 0 1px 0 #f4a261, 0px 10px 0 0px #f4a261;
+        border-radius: 50%;
+
+        &:active {
+            top:10px;
+            background-color:#e76f51;
+            box-shadow:inset 0 1px 0 #361d14;
+        }
+    }
+
+    &:after {
+        content:"";
+        height:100%;
+        width:100%;
+        padding:4px;
+        position: absolute;
+        bottom:-15px;
+        left:-4px;
+        z-index:-1;
+        background-color:#2A9D8F;
+        border-radius: 5px;
+    }
+}
