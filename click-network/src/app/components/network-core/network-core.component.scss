@@ -4,9 +4,9 @@
     * Dimension/Color Variables
     */
     --dimension: 500px;
-    --top-color: #e76f51;
-    --indent-color: #f4a261;
-    --base-color: #2A9D8F;
+    --top-color: #e56b6f;
+    --indent-color: #b56576;
+    --base-color: #6d597a;
 
     position:relative;
     display:inline-block;
@@ -15,7 +15,7 @@
     height: var(--dimension);
     width: var(--dimension);
 
-    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
 
     a {
         height: 450px;
@@ -36,12 +36,14 @@
         position:relative;
         padding:20px 40px;
 
-        box-shadow:inset 0 1px 0 #f4a261, 0px 10px 0 0px #f4a261;
+        box-shadow:inset 0 1px 0 var(--indent-color), 0px 10px 0 0px var(--indent-color);
         border-radius: 50%;
+
+        cursor: pointer;
 
         &:active {
             top:10px;
-            background-color:#e76f51;
+            background-color:var(--top-color);
             box-shadow:inset 0 1px 0 #361d14;
         }
     }
@@ -55,7 +57,7 @@
         bottom:-15px;
         left:-4px;
         z-index:-1;
-        background-color:#2A9D8F;
+        background-color:var(--base-color);
         border-radius: 5px;
     }
 }
