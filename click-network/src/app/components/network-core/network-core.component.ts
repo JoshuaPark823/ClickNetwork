@@ -12,4 +12,8 @@ export class NetworkCoreComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  onClick(): void {
+    
+  }
+
 }
