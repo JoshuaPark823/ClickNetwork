@@ -1,3 +1,4 @@
+import { GeolocationService } from './../../services/geolocation.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,13 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NetworkCoreComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private _geolocationService: GeolocationService
+  ) { }
 
   ngOnInit(): void {
+    this._geolocationService.initializeClientData();
   }
 
   onClick(): void {
-    
+    let data = this._geolocationService.getClientData();
+    console.log(data);
   }
 
 }
