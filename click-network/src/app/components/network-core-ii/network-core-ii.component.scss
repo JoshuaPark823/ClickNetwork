@@ -1,8 +1,11 @@
 $button-height: 10em;
 $button-width: 40em;
 
-$body-color: #f4978e;
-$base-color: #f08080;
+$line-color: #c9fdff; // Border line color
+$base-color: #08f7fe; // Basically the button color
+
+// red: #f08080, #f4978e
+
 $glow-radius: 60px;
 
 .core-container {
@@ -10,8 +13,8 @@ $glow-radius: 60px;
     justify-content: center;
     align-items: center;
 
-    height: 100%;
-    width: 100%;
+    height: 50em;
+    width: 50em;
 }
 
 .base {
@@ -61,7 +64,7 @@ $glow-radius: 60px;
 		width: $button-width;
 		height: $button-height;
 
-        border: 1px solid #f4978e;
+        border: 1px solid $line-color;
 
         // TOP
         background: $base-color;

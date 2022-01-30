@@ -18,7 +18,7 @@ export class GeolocationApi {
     }
 
     public getGeolocationData() {
-        return this._http.get<GeolocationData>('https://geolocation-db.com/json/')
+        return this._http.get<any>('https://geolocation-db.com/json/')
             .pipe(
                 catchError(err => {
                     return throwError(err);
