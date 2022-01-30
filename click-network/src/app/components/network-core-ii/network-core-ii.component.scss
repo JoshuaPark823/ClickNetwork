@@ -3,25 +3,29 @@ $button-width: 40em;
 
 $body-color: #f4978e;
 $base-color: #f08080;
-$bg-color: black;
+$glow-radius: 60px;
 
 .core-container {
     display: flex;
     justify-content: center;
     align-items: center;
+
+    height: 100%;
+    width: 100%;
 }
 
 .base {
-    box-shadow: 0px 15px 0 20px #352d2d, 0px 40px 0 30px #000000;
+    box-shadow: 0px 15px 0 20px #352d2d, 
+                0px 40px 0 30px #000000;
 	cursor: pointer;
 	position: absolute;
 	border-radius: 50%;
 	width: $button-width;
 	height: $button-height;
-    z-index: 0;
+    z-index: 50;
 }
 
-.button{
+.button {
 	cursor: pointer;
 	position: absolute;
 	border-radius: 50%;
@@ -32,10 +36,10 @@ $bg-color: black;
 
     background: $base-color;
     color: #050801;
-    box-shadow: 0 0 50px $base-color,
-                0 0 50px $base-color,
-                0 0 50px $base-color,
-                0 0 50px $base-color; 
+    box-shadow: 0 0 $glow-radius $base-color,
+                0 0 $glow-radius $base-color,
+                0 0 $glow-radius $base-color,
+                0 0 $glow-radius $base-color; 
 	
 	&::before{
 		content: '';
@@ -51,10 +55,10 @@ $bg-color: black;
         // TOP
         background: $base-color;
         color: #050801;
-        box-shadow: 0 0 50px $base-color,
-                    0 0 50px $base-color,
-                    0 0 50px $base-color,
-                    0 0 50px $base-color; 
+        box-shadow: 0 0 $glow-radius $base-color,
+                    0 0 $glow-radius $base-color,
+                    0 0 $glow-radius $base-color,
+                    0 0 $glow-radius $base-color; 
 	}
 
 	&::after{
@@ -68,14 +72,28 @@ $bg-color: black;
         // BODY
         background: $base-color;
         color: #050801;
-        box-shadow: 0 0 50px $base-color,
-                    0 0 50px $base-color,
-                    0 0 50px $base-color,
-                    0 0 50px $base-color;
+        box-shadow: 0 0 $glow-radius $base-color,
+                    0 0 $glow-radius $base-color,
+                    0 0 $glow-radius $base-color,
+                    0 0 $glow-radius $base-color;
 	}
 
 	&:active{
 		&::before{ bottom: 10%; }
 		&::after{ height: 10%; }
 	}
+}
+
+.glow {
+    box-shadow: 0px 75px 100px 300px $base-color,
+                inset 0px 50px 100px 200px $base-color;
+
+	position: absolute;
+	border-radius: 40%;
+	width: $button-width * 1;
+	height: 10px;
+    opacity: 0.5;
+
+    margin-top: 5em;
+    z-index: 0;
 }
