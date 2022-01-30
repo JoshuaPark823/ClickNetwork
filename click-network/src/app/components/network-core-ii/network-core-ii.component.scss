@@ -1,0 +1,151 @@
+$button-height: 10em;
+$button-width: 40em;
+
+$top-color: #f08080;
+$body-color: #f4978e;
+$base-color: #f08080;
+$bg-color: black;
+
+.core-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.base {
+    box-shadow: 0px 15px 0 20px #352d2d, 0px 40px 0 30px #000000;
+	cursor: pointer;
+	position: absolute;
+	border-radius: 50%;
+	width: $button-width;
+	height: $button-height;
+    z-index: 0;
+}
+
+.button{
+	cursor: pointer;
+	position: absolute;
+	border-radius: 50%;
+	width: $button-width;
+	height: $button-height;
+
+    z-index: 100;
+
+    background: $base-color;
+    color: #050801;
+    box-shadow: 0 0 5px $base-color,
+                0 0 25px $base-color,
+                0 0 50px $base-color,
+                0 0 200px $base-color; 
+	
+	&::before{
+		content: '';
+		z-index: 1;
+		border-radius: 50%;
+		position: absolute;
+		bottom: 100%;
+		width: $button-width;
+		height: $button-height;
+
+        border: 1px solid #f4978e;
+
+        // TOP
+        background: $base-color;
+        color: #050801;
+        box-shadow: 0 0 5px $base-color,
+                    0 0 25px $base-color,
+                    0 0 50px $base-color,
+                    0 0 200px $base-color; 
+	}
+
+	&::after{
+		content: '';
+		background-color: #c0392b;
+		position: absolute;
+		bottom: 50%;
+		width: $button-width;
+		height: $button-height;
+
+        // BODY
+        background: $base-color;
+        color: #050801;
+        box-shadow: 0 0 5px $base-color,
+                    0 0 25px $base-color,
+                    0 0 50px $base-color,
+                    0 0 200px $base-color; 
+	}
+
+	&:active{
+		&::before{ bottom: 10%; }
+		&::after{ height: 10%; }
+	}
+}
+
+.glow {
+    background: $base-color;
+    color: #050801;
+    box-shadow: 0 0 5px $base-color,
+                0 0 25px $base-color,
+                0 0 50px $base-color,
+                0 0 200px $base-color; 
+}
+
+// $top-color: #f08080;
+// $body-color: #f4978e;
+// $base-color: #f08080;
+// $bg-color: black;
+
+// a {
+//     display:inline-block;
+//     position: relative;
+
+//     height: 30em;
+//     width: 25em;
+
+//     cursor: pointer;
+//     // background-color: $body-color;
+
+//     background: $base-color;
+//     color: #050801;
+//     box-shadow: 0 0 5px $base-color,
+//                 0 0 25px $base-color,
+//                 0 0 50px $base-color,
+//                 0 0 200px $base-color; 
+
+//     &::before {
+//         height: 5em;
+//         width: 25em;
+//         border-radius: 45%;
+
+//         content: "";
+//         position: relative;
+//         background-color: $top-color;
+//         display:inline-block;
+
+//         top: -2.25em;
+
+//         border: 1px solid whitesmoke;
+
+//         background: $base-color;
+//         color: #050801;
+//         box-shadow: 0 0 5px $base-color,
+//                     0 0 25px $base-color,
+//                     0 0 50px $base-color,
+//                     0 0 200px $base-color; 
+//     }
+
+//     &:active {
+//         height: 20em;
+//         margin-top: 10em;
+//     }
+// }
+
+// .base {
+//     position:relative;
+
+//     height: 10em;
+//     width: 25em;
+
+//     background-color: azure;
+//     top: -5em;
+// }

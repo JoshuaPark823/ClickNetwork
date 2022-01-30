@@ -7,11 +7,13 @@ import { HttpClientModule } from "@angular/common/http";
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NetworkCoreComponent } from './components/network-core/network-core.component';
+import { NetworkCoreIiComponent } from './components/network-core-ii/network-core-ii.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NetworkCoreComponent
+    NetworkCoreComponent,
+    NetworkCoreIiComponent
   ],
   imports: [
     BrowserModule,
