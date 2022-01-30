@@ -25,6 +25,17 @@ $glow-radius: 60px;
     z-index: 50;
 }
 
+.button-wrapper {
+    position:absolute;
+    width: $button-width;
+    height: $button-height;
+
+    // Offsets
+    margin-bottom: $button-height * 2;
+    margin-top: $button-height;
+    padding-top: $button-height;
+}
+
 .button {
 	cursor: pointer;
 	position: absolute;
