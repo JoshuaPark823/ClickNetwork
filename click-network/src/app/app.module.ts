@@ -8,6 +8,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NetworkCoreComponent } from './components/network-core/network-core.component';
 import { NetworkCoreIiComponent } from './components/network-core-ii/network-core-ii.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { NetworkCoreIiComponent } from './components/network-core-ii/network-cor
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule
   ],
   providers: [
     GeolocationService,

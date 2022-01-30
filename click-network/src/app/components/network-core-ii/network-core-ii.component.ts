@@ -17,8 +17,8 @@ export class NetworkCoreIiComponent implements OnInit {
   }
 
   onClick(): void {
-    let data = this._geolocationService.getClientData();
-    console.log(data);
+    // let data = this._geolocationService.getClientData();
+    // console.log(data);
   }
 
 }
