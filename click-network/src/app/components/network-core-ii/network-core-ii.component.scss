@@ -1,12 +1,12 @@
 $button-height: 10em;
 $button-width: 40em;
 
-$line-color: #c9fdff; // Border line color
-$base-color: #08f7fe; // Basically the button color
+$line-color: #ff534d; // Border line color
+$base-color: #ff3830; // Basically the button color
 
 // red: #f08080, #f4978e
 
-$glow-radius: 60px;
+$glow-radius: 0px;
 
 .core-container {
     display: flex;
@@ -99,9 +99,6 @@ $glow-radius: 60px;
 }
 
 .glow {
-    box-shadow: 0px 75px 100px 300px $base-color,
-                inset 0px 50px 100px 200px $base-color;
-
 	position: absolute;
 	border-radius: 40%;
 	width: $button-width * 1;
