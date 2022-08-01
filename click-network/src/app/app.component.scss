@@ -1,17 +1,26 @@
+@import 'animate.css';
+
 .main {
 
-    // font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    height: 100vh;
+    padding-top: 10%;
+    overflow-y: hidden;
     font-family: 'Sigmar One', cursive;
 
     display: flex;
-    flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
 
-    margin-top: 20em;
+    .core-wrapper {
+        height: 50%;
 
-    .title-container {
-        margin-top: 10%;
-        font-size: 10rem;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+
+        .title-container {
+            font-size: 10rem;
+        }
     }
 }
